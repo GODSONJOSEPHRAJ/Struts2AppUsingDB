@@ -1,0 +1,33 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <package name="default" extends="struts-default">
+        
+        <!-- Action to add user -->
+        <action name="userAdd" class="com.example.action.UserAction" method="add">
+            <result name="success">/userSuccess.jsp</result>
+        </action>
+        
+        <!-- Action to list all users -->
+        <action name="userList" class="com.example.action.UserAction" method="list">
+            <result name="success">/userList.jsp</result>
+        </action>
+        
+        <!-- Action to Edit users -->
+        <action name="userEdit" class="com.example.action.UserAction" method="edit">
+    	<result name="edit">/updateUser.jsp</result>
+		</action>
+        
+        <!-- Action to update user -->
+        <action name="userUpdate" class="com.example.action.UserAction" method="update">
+            <result name="success">/userSuccess.jsp</result>
+        </action>
+
+        <!-- Action to delete user -->
+        <action name="userDelete" class="com.example.action.UserAction" method="delete">
+            <result name="success">/userSuccess.jsp</result>
+        </action>
+
+    </package>
+</struts>
